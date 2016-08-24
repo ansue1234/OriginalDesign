@@ -1,6 +1,7 @@
 int r = 0;
 int g = 0;
 int b = 0;
+int w = 5;
 void setup()
 {
 	frameRate(60);
@@ -12,44 +13,47 @@ void draw()
 {
   
   line(200,0,200,400);
-  pen();
+  
   if(keyPressed && key==' '){
 		 clear();
 	}
   colour();
-
-  
+  if(keyPressed && key == UP){
+		w += 5;
+	}
+	pen();
 
 }
+
 
 void pen(){
 	if(mousePressed==true && mouseX>200 && (mouseButton == LEFT)){
   	fill(r,g,b);
   	noStroke();
-  	ellipse(mouseX, mouseY, 5, 5);
-  	ellipse((200-(mouseX-200)),mouseY,5,5);
+  	ellipse(mouseX, mouseY, w, w);
+  	ellipse((200-(mouseX-200)),mouseY,w,w);
   	line(200,0,200,400);
   }
   if(mousePressed==true && mouseX<200 && (mouseButton == LEFT)){
   	fill(r,g,b);
   	noStroke();
-  	ellipse(mouseX, mouseY, 5, 5);
-  	ellipse((200+(200-mouseX)),mouseY,5,5);
+  	ellipse(mouseX, mouseY, w, w);
+  	ellipse((200+(200-mouseX)),mouseY,w,w);
   	line(200,0,200,400);
   }
   if(mousePressed==true && mouseX>200 && (mouseButton == RIGHT)){
   	fill(255);
   	noStroke();
-  	ellipse(mouseX, mouseY, 5, 5);
-  	ellipse((200-(mouseX-200)),mouseY,5,5);
+  	ellipse(mouseX, mouseY, w, w);
+  	ellipse((200-(mouseX-200)),mouseY,w,w);
   	stroke(0);
   	line(200,0,200,400);
   }
   if(mousePressed==true && mouseX<200 && (mouseButton == RIGHT)){
   	fill(255);
   	noStroke();
-  	ellipse(mouseX, mouseY, 5, 5);
-  	ellipse((200+(200-mouseX)),mouseY,5,5);
+  	ellipse(mouseX, mouseY, w, w);
+  	ellipse((200+(200-mouseX)),mouseY,w,w);
   	stroke(0);
   	line(200,0,200,400);
   }
@@ -97,4 +101,8 @@ void colour(){
 		g=255;
 		b=0;
 	}
+}
+
+void stroke(){
+	
 }
