@@ -109,4 +109,9 @@ void keyPressed(){
        w -= 1;
      } 
     }
+  if(w>=50) {
+  	w=50;
+  }else if(w<=5){
+  	w=5;
   }
+}
