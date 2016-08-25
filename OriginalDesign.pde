@@ -18,11 +18,10 @@ void draw()
 		 clear();
 	}
   colour();
-  if(keyPressed && key == UP){
-		w += 5;
-	}
+if (keyPressed && key == 's'){
+       w = 5;
+     }
 	pen();
-
 }
 
 
@@ -102,7 +101,12 @@ void colour(){
 		b=0;
 	}
 }
-
-void stroke(){
-	
-}
+void keyPressed(){
+  if(key == CODED){
+  	 if (keyCode == UP) {
+       w += 1;
+     } else if (keyCode == DOWN) {
+       w -= 1;
+     } 
+    }
+  }
