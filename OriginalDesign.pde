@@ -14,14 +14,17 @@ void draw()
   stroke(0);
   line(200,0,200,400);
   
-  if(keyPressed && key==' '){
-		 clear();
+	if(keyPressed && key==' '){
+			 clear();
+		}
+	  colour();
+	if (keyPressed && key == 'q'){
+	       w = 5;
+	     }
+		pen();
+	if (keyPressed && key == 's'){
+		save("Your img.png");
 	}
-  colour();
-if (keyPressed && key == 's'){
-       w = 5;
-     }
-	pen();
 }
 
 
