@@ -11,7 +11,7 @@ void setup()
 }
 void draw()
 {
-  
+  stroke(0);
   line(200,0,200,400);
   
   if(keyPressed && key==' '){
@@ -31,6 +31,7 @@ void pen(){
   	noStroke();
   	ellipse(mouseX, mouseY, w, w);
   	ellipse((200-(mouseX-200)),mouseY,w,w);
+    stroke(0);
   	line(200,0,200,400);
   }
   if(mousePressed==true && mouseX<200 && (mouseButton == LEFT)){
@@ -38,6 +39,7 @@ void pen(){
   	noStroke();
   	ellipse(mouseX, mouseY, w, w);
   	ellipse((200+(200-mouseX)),mouseY,w,w);
+    stroke(0);
   	line(200,0,200,400);
   }
   if(mousePressed==true && mouseX>200 && (mouseButton == RIGHT)){
